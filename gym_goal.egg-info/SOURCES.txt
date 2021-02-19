@@ -1,0 +1,8 @@
+README.md
+setup.py
+gym_goal/__init__.py
+gym_goal.egg-info/PKG-INFO
+gym_goal.egg-info/SOURCES.txt
+gym_goal.egg-info/dependency_links.txt
+gym_goal.egg-info/requires.txt
+gym_goal.egg-info/top_level.txt
