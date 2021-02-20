@@ -14,7 +14,7 @@ from gym.utils import seeding
 import sys
 from .config import PLAYER_CONFIG, BALL_CONFIG, GOAL_AREA_LENGTH, GOAL_AREA_WIDTH, GOAL_WIDTH, GOAL_DEPTH, KICKABLE, \
     INERTIA_MOMENT, MINPOWER, MAXPOWER, PITCH_LENGTH, PITCH_WIDTH, CATCHABLE, CATCH_PROBABILITY, SHIFT_VECTOR, \
-    SCALE_VECTOR, LOW_VECTOR, HIGH_VECTOR
+    SCALE_VECTOR, LOW_VECTOR, HIGH_VECTOR, PENALTY_AREA_LENGTH, PENALTY_AREA_WIDTH, CENTRE_CIRCLE_RADIUS
 from .util import bound, bound_vector, angle_position, angle_between, angle_difference, angle_close, norm_angle, \
     vector_to_tuple
 
@@ -374,7 +374,10 @@ class GoalEnv(gym.Env):
 
         self.__draw_vertical(length, 0, width)
         self.__draw_box(GOAL_AREA_WIDTH, GOAL_AREA_LENGTH)
-        # self.draw_box(PENALTY_AREA_WIDTH, PENALTY_AREA_LENGTH)
+        self.__draw_box(PENALTY_AREA_WIDTH, PENALTY_AREA_LENGTH)
+        #self.__draw_radius(np.array([24,0]), CENTRE_CIRCLE_RADIUS)
+        #pygame.draw.circle(self.window, self.__white, pos, radius, 1)
+        pygame.draw.arc(self.window, self.__white, [360,240,240,240], 2*math.pi/3, -2*math.pi/3+0.05, 1)
 
         depth = length + self.__visualiser_scale(GOAL_DEPTH)
         self.__draw_horizontal(width / 2 - self.__visualiser_scale(GOAL_WIDTH / 2), length, depth)
@@ -413,7 +416,7 @@ class GoalEnv(gym.Env):
     def __draw_box(self, area_width, area_length):
         """ Draw a box at the goal line. """
         lower_corner = self.__visualiser_scale(PITCH_WIDTH / 2 - area_width / 2)
-        upper_corner = lower_corner + self.__visualiser_scale(area_width)
+        upper_corner = self.__visualiser_scale(area_width) + lower_corner 
         line = self.__visualiser_scale(PITCH_LENGTH / 2 - area_length)
         self.__draw_vertical(line, lower_corner, upper_corner)
         self.__draw_horizontal(lower_corner, line, self.__visualiser_scale(PITCH_LENGTH / 2))
