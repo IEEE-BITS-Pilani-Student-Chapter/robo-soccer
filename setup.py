@@ -1,13 +1,6 @@
 from setuptools import setup
 
-setup(
-    name='gym_goal',
-    version='0.0.1',
-    description='Goal domain OpenAI Gym environment',
-    author=['Craig James Bester', 'Ekansh Gupta'],
-    packages=['gym_goal'],
-    install_requires=['gym',
-                      'pygame', #'pygame>=1.9.3'
-                      'numpy',  #'numpy>=1.14.0'
-    ]
-) 
+setup(name='robo_soccer',
+      version='1.0.1',
+      install_requires=['gym', 'pymunk==5.5.0']  # And any other dependencies foo needs
+)
