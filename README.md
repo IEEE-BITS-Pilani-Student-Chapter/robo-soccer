@@ -4,7 +4,7 @@
 
 * Action space consists of the following actions:
 Arrow keys: NOOP[0], UP[1], RIGHT[2], DOWN[3], LEFT[4] 
-Actoin keys: noop[0], dash[1], shoot[2], press[3], pass[4]
+Action keys: noop[0], dash[1], shoot[2], press[3], pass[4]
 Hence an action space of 5x5x(no_of_players_in_a_team).
 
 * The observation space returns the position and velocity of the ball as: [0] x position, [1] y position, [2] x velocity, [3] y velocity.
