@@ -18,7 +18,7 @@ Hence observation space of 1x4x(no_of_total_players_and ball).
 
 Use the colab_notebook to try the environment and train your agents. A sample colab file [startup_guide.ipynb](./startup_guide.ipynb) has been uploaded to guide you on setting the things up. Alternatively you can clone locally and train it.
 
-You can use either of tensorflow or pytorch to visualize your agents. Just upload both the code and the policy to the circulated google form. 
+You can use either of tensorflow or pytorch to visualize your agents. Just upload both the code and the trained policy model to the google form https://forms.gle/T6qC5T2YpjwGW3ph9. 
 
 _All the best_ ✌🏻
 _Team IEEE BPSC_
