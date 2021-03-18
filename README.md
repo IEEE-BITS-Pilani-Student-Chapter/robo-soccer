@@ -14,7 +14,7 @@ Hence observation space of 1x4x(no_of_total_players_and ball).
 
 ![Alt Text](./assets/random_actions.gif)
 
-* The team whose trained model scores highest over a avgerage of 30 episodes run on our server will be declared as the winner. 
+* The team whose trained model scores highest over a average of 30 episodes run on our server will be declared as the winner. 
 
 Use the colab_notebook to try the environment and train your agents. A sample colab file [startup_guide.ipynb](./startup_guide.ipynb) has been uploaded to guide you on setting the things up. Alternatively you can clone locally and train it.
 
