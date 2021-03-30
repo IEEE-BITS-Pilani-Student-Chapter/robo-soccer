@@ -32,5 +32,5 @@ _Team IEEE BPSC_
 
 ## Queries
 
-For any queries, mail us at [ieee.bpsc@gmail.com](mailto:ieee.bpsc@gmail.com).
+For any queries, mail us at [ieee.bpsc@gmail.com](mailto:ieee.bpsc@gmail.com) or directly contact [Jash Shah](mailto:jashshah0801@gmail.com), Technical Co-ordinator at IEEE Student Chapter BITS Pilani.
 For technical queries, create an issue in the repository itself. 
